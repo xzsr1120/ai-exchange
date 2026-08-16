@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { useLearning } from "./learning-provider";
+import { InteractionHub } from "./interaction-hub";
 
 const navigation = [
   { href: "/", label: "闯关地图", short: "地图", icon: "⌂" },
@@ -68,6 +69,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </Link>
         ))}
       </nav>
+      <InteractionHub />
     </div>
   );
 }
